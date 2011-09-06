@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  content: MyText
+  slug: MyString
+  header: false
+  sidebar: false
+  rank: 1
+
+two:
+  title: MyString
+  content: MyText
+  slug: MyString
+  header: false
+  sidebar: false
+  rank: 1

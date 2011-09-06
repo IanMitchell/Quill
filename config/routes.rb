@@ -1,4 +1,6 @@
 Quill::Application.routes.draw do
+  resources :pages
+
   devise_for :authors
 
   # The priority is based upon order of creation:
