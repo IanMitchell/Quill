@@ -16,7 +16,21 @@ group :assets do
   gem 'uglifier'
 end
 
+# Template
 gem 'jquery-rails'
+gem 'pjax_rails'
+gem 'haml'
+
+# Slugs
+gem 'friendly_id', '~> 4.0.0.beta8'
+
+# Users 
+gem 'devise'
+gem 'gravtastic'
+
+# Twitter 
+gem 'twitter'
+gem 'twitter-text'
 
 # Use unicorn as the web server
 # gem 'unicorn'
