@@ -1,0 +1,29 @@
+@import '../partials/color';
+@import '../partials/size';
+
+#twitter {
+	width: $twitter-width;
+	float: left;
+	
+	p {
+	  background: $theme-highlight-color;
+	  color: $theme-background-color;
+	  padding: $twitter-status-padding;
+	  margin: $twitter-status-margin;
+	}
+
+	#triangle {
+	  font-size: $reset;
+	  line-height: $reset; 
+	  width: $reset;
+	  border-top: $twitter-triangle-width solid $theme-highlight-color;
+	  border-left: $twitter-triangle-width solid $theme-background-color;
+	  margin: $twitter-triangle-margin;
+	  float: left;
+	}
+
+	img {
+	  margin-top: $twitter-avatar-margin-top;
+	  vertical-align: middle;
+	}
+}

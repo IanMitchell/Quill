@@ -1,0 +1,71 @@
+@import '../partials/color';
+@import '../partials/size';
+@import '../partials/style';
+
+label {
+	display: block;
+	text-transform: uppercase;
+	font-size: 10px;
+	height: 13px;
+	font-weight: bold;
+	padding: 8px 0px 2px 0px;
+}
+
+input[type="submit"] {
+	border-radius: 3px;
+	border: 1px solid #c2c2c2;
+	font-size: 10px;
+	@include linear-gradient(#f7f7f7, #dfdfdf);
+	padding: 3px 20px 3px 20px;
+	color: #373a3d;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: bold;
+	
+	&:active,
+	&:hover,
+	&:focus {
+		border: 1px solid $theme-highlight-color;
+		outline: $reset;
+		@include linear-gradient(#eaeaea, #d4d4d4);
+	}
+	
+	&:disabled {
+		@include linear-gradient(#f4f4f4, #eaeaea);
+		border: 1px solid #dfdfdf;
+		cursor: default;
+	}
+}
+
+input[type="text"], 
+input[type="email"],
+input[type="url"] {
+	border: 1px solid #cccccc;
+	width: 220px;
+	padding-left: 2px;
+	height: 19px;
+	background: $theme-background-color;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+	&:focus {
+		border: 1px solid $theme-highlight-color;
+		outline: none;
+	}	
+}
+
+textarea {
+	border: 1px solid #cccccc;
+	padding-left: 2px;
+	background: $theme-background-color;
+	width: 90%;
+	height: 107px;
+	margin-bottom: 10px;
+	
+	&:focus {
+		border: 1px solid $theme-highlight-color;
+		outline: none;	
+	}
+}

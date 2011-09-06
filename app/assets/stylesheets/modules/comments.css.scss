@@ -1,0 +1,60 @@
+@import '../partials/size';
+@import '../partials/color';
+
+#comments {
+	h3 {
+		font-size: $comment-title-font-size;
+		margin: $comment-title-margin;
+	}
+	
+	.comment {
+		display: block;
+		clear: both;
+		overflow: auto;
+		border-bottom: $comment-border-bottom solid $theme-text-highlight-color;
+		padding: $comment-padding;
+		
+		img {
+			float: left;
+			height: $comment-avatar-size;
+			width: $comment-avatar-size;
+			margin: $comment-avatar-margin;
+		}
+		
+		span {
+			display: block;
+			margin-bottom: $comment-meta-margin-bottom;
+			font-weight: bold;
+			
+			a {
+				text-decoration: underline;
+			}
+		}
+		
+		p {
+			margin-bottom: $comment-text-margin-bottom;
+			width: $comment-text-width;
+			float: right;
+		}
+	}
+	
+	.author {
+		background: $theme-author-highlight-color;
+	}
+	
+	#comment-left{
+		width: $comment-form-left-width;
+		float: left;
+		overflow: hidden;
+	}
+
+	#comment-right {
+		width: $comment-form-right-width;
+		float: left;
+		overflow: hidden;
+	}
+	
+	p {
+		margin-bottom: $reset;
+	}
+}

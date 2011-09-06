@@ -1,0 +1,38 @@
+@import '../partials/size';
+@import '../partials/color';
+
+#archives {
+	width: $archives-width;
+	float: left;
+	
+	h4 {
+	  border-top: $archives-title-border-top solid $theme-highlight-color;
+		font-size: $archives-title-font-size;
+		font-weight: normal;
+		text-transform: uppercase;
+		padding-top: $archives-title-padding-top;
+		margin: $archives-title-margin;
+	}
+	
+	dl {
+		text-align: center;
+	  overflow: auto;
+	
+		dt {
+			width: $archives-year-width;
+			float: left;
+			clear: both;
+			padding: $archives-year-padding;
+			font-weight: bold;
+			color: $theme-text-highlight-color;
+			border-right: $archives-year-border-right solid $theme-text-highlight-color;
+		}
+		
+		dd {
+			width: $archives-month-width;
+			float: left;
+			padding: $archives-month-padding;
+			color: $theme-text-highlight-color;
+		}
+	}
+}

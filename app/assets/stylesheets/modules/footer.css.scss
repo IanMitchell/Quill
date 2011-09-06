@@ -1,0 +1,15 @@
+@import 'partials/size';
+
+footer {
+	margin-bottom: $footer-margin-bottom;
+	overflow: auto;
+	clear: both;
+	display: block;
+	
+	#copyright{
+		span {
+			font-size: $copyright-font-size;
+			float: right;
+		}
+	} 
+}

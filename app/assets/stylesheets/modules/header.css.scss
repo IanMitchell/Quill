@@ -1,0 +1,29 @@
+@import '../partials/color';
+@import '../partials/size';
+@import '../partials/style';
+
+header {
+	h1 {
+	  text-transform: lowercase;
+	  font-size: $header-font-size;
+		float: left;
+		margin-top: $header-margin-top;
+		
+		@include static_link($theme-highlight-color, none);
+	}
+	
+	nav {
+		float: right;
+		margin-top: $header-nav-margin-top;
+		
+		ul {
+				list-style: none;
+				
+				li {
+					float: left;
+					margin-left: $header-nav-link-margin-left;
+					font-size: $header-nav-link-font-size;
+				}
+		}
+	}
+}

@@ -1,0 +1,72 @@
+.content {
+	margin-bottom: 75px;
+}
+
+#blog-roll {
+	min-height: 275px;
+}
+
+#blog-roll, .content {
+	margin-top: 10px;
+	width: 100%;
+	float: left;
+	border-top: 10px solid #2e2055;
+}
+
+.content img {
+	margin: 15px 15px 0px 0px;
+	float: left;
+	height: 250px;
+	width: 250px;
+}
+
+#blog-roll h2, .content h2 {
+	font-size: 36px;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+/*#blog-roll h2 a:link, #blog-roll h2 a:visited, #blog-roll h2 a:active, #blog-roll h2 a:hover, #blog-roll h2 a:focus {
+	color: #444751;
+	text-decoration: none;
+}*/
+
+#blog-roll p, .content p {
+	line-height: 160%;
+}
+
+#blog-roll .post {
+	display: none;
+}
+
+#blog-roll .selected {
+	display: block;
+}
+
+#blog-roll #nav {
+	list-style: none;
+	background: #fff;
+	margin-top: -10px;
+	float: right;
+}
+
+#blog-roll #nav li {
+	float: left;
+}
+
+#blog-roll #nav li a {
+	width: 10px;
+	height: 10px;
+	margin-left: 2px;
+	background: #2e2055;
+	display: block;
+}
+
+#blog-roll #nav .active a {
+	background: #1160b7;
+}
+
+
+/*  Post Preview, Archivem and Post Tags
+*****************************************/

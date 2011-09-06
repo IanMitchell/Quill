@@ -1,0 +1,47 @@
+@import '../partials/color';
+@import '../partials/size';
+
+aside {
+	float: left;
+	margin: $sidebar-margin;
+	width: $sidebar-width;
+	overflow: auto;
+	display: block;
+	
+	.project {
+		background: $theme-highlight-color;
+		width: $sidebar-project-size;
+		height: $sidebar-project-size;
+		float: left;
+		margin: $sidebar-project-margin;
+		
+		a {
+			border: none;
+			display: block;
+			text-decoration: none;
+			overflow: auto;
+		}
+		
+		img {
+			margin: $sidebar-project-image-margin;
+			height: $sidebar-project-image-size;
+			width: $sidebar-project-image-size;
+			display: block;
+		}
+		
+		figcaption {
+			color: $theme-background-color;
+			margin: $sidebar-project-caption-margin; 
+			display: block;
+		}
+	}
+	
+	.project:nth-child(2n+1) {
+		clear: left;
+		margin-left: $reset;
+	}
+	
+	.project:nth-child(2n) {
+		margin-right: $reset;
+	}
+}

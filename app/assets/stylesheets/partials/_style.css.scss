@@ -1,0 +1,19 @@
+@mixin static-link($color, $decoration) {	
+	a {
+		&:link,
+		&:visited,
+		&:hover,
+		&:active,
+		&:focus {
+			color: $color;
+			text-decoration: $decoration;
+		}
+	}
+}
+
+@mixin linear-gradient($start, $stop) {
+	background: $start;
+	background-image: -o-linear-gradient($start, $stop);
+	background-image: -webkit-linear-gradient($start, $stop);
+	background-image: linear-gradient(top, $start, $stop);
+}

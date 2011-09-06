@@ -1,0 +1,15 @@
+@import '../partials/color';
+@import '../partials/size';
+
+section #pagination {
+	border-top: $pagination-border-top solid $theme-text-highlight-color;
+	padding-top: $pagination-padding-top;
+	
+	.new {
+		float: left;
+	}
+	
+	.old {
+		float: right;
+	}
+}

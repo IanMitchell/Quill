@@ -1,0 +1,90 @@
+@import '../partials/color';
+@import '../partials/size';
+@import '../partials/style';
+
+article {
+	display: block;
+	overflow: hidden;
+	
+	header {
+		margin-top: $reset;
+		
+		h2 {
+			font-weight: normal;
+			text-transform: uppercase;
+			font-size: $article-header-title-font-size;
+			margin-bottom: $article-header-title-margin-bottom;
+			
+			@include static-link($theme-text-color, none);
+		}
+		
+		span {
+			margin: $article-header-meta-margin;
+			display: block;
+		}
+		
+		time {
+			font-style: oblique;
+		}
+	}
+	
+	.thumbnail {
+		float: left;
+		width: $article-thumbnail-size;
+		height: $article-thumbnail-size;
+		margin: $article-thumbnail-margin;
+	}
+	
+	.aligncenter {
+		text-align: center;
+		margin: auto;
+	}
+	
+	.preview {
+		overflow: hidden;
+	}
+	
+	p {
+		line-height: $article-text-line-height;
+		margin-bottom: $article-text-margin-bottom;
+	}
+	
+	ul {
+	    margin-left: $article-list-margin-left;
+	    list-style: square;
+	
+			li {
+			    margin-bottom: $article-list-item-margin-bottom;
+			}
+	}
+	
+	h4 {
+		text-transform: uppercase;
+		border-bottom: $article-subtitle-border-bottom solid $theme-text-color;
+		margin-bottom: $article-subtitle-margin-bottom;
+		padding: $article-subtitle-padding;
+		font-size: $article-subtitle-font-size;
+	}
+	
+	footer {
+		overflow: hidden;
+		border-top: $article-footer-border-top solid $theme-text-highlight-color;
+		padding: $article-footer-padding;
+		
+		.meta {
+			float: left;
+			
+			span {
+				display: block;
+				
+				a {
+					font-style: oblique;
+				}
+			}
+		}
+		
+		.readmore {
+			float: right;
+		}
+	}
+}
