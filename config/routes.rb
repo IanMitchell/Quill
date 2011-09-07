@@ -1,7 +1,8 @@
 Quill::Application.routes.draw do
-  get "homepage/index"
-
   resources :pages
+
+  match '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
+  resources :posts
 
   devise_for :authors
   
