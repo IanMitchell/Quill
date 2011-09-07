@@ -52,10 +52,10 @@
                     = Date::ABBR_MONTHNAMES[month]
         
         #twitter
-          - twitter = Twitter.user('IanMitchel1')
-          %p= raw auto_link(twitter.status.text)
+          - #twitter = Twitter.user('IanMitchel1')
+          %p= #raw auto_link(twitter.status.text)
           #triangle
-          = link_to image_tag(twitter.profile_image_url), 'http://twitter.com/' + 'IanMitchel1'
+          = #link_to image_tag(twitter.profile_image_url), 'http://twitter.com/' + 'IanMitchel1'
           #copyright
             %span 
               &copy; Copyright 2011 Ian Mitchell. Based on 
