@@ -1,35 +1,53 @@
 # Quill
 
-Quill is a blogging platform. Just something I'm cooking to learn Rails really. If you see any coding errors or something that doesn't follow a best practice / could be written more clearly, please let me know!
+Quill wants to be a blogging platform. At the moment, it's really just something I'm making to learn Rails. As such, there are a lot of errors and half-implemented features. I'm sure there are plenty of best-practices that I've broken as well. If you notice anything specific, please let me know! I'd love to change it.
 
-It should be noted that this is still very much in development at the moment, and shouldn't be used as a live website. For instance, authors don't have names yet. Hopefully soon we'll be able to offer a stable release however!
+It should be noted that Quill is still very much in development, and shouldn't be used as a live website. Hopefully we'll be able to offer a stable release soon!
+
+### Current Features
+
+* Ajax Comments
+* PJAX (http://pjax.heroku.com/)
+* Post Categories
+* Archives that sort via Date and Category
+* Dynamic Header / Sidebar Page Links
+
+### Broken Features
+
+* Twitter integration is currently broken (Twitter gem randomly crashes?)
+* All Comment fields currently required 
 
 ### Future Plans
+
+* Author name / Twitter handle
+* Multiple author support
+* Multiple Twitter account support
 * Inline comment moderation
-* Ajax Comments
+* Comment credential storage
 * Admin backend
-* XML-RPC Server
-* Global Comment Credential Cookies
-* Tests
-* Inline JS Validations
-* Akismet Protection
-* Post Draft Support (autosaving?)
-* Syntax Highlighting
-* Email Options (New Comment)
-* File Upload
-* Thumbnail Support
-* Image Galleries
-* Image Watermark
-* Admin Bar
+* XML-RPC server
+* Tests!
+* JS form validations
+* Akismet spam protection
+* Draft support (autosaving?)
+* Syntax highlighting
+* Email options (new comment notification)
+* File upload
+* Thumbnail support
+* Image galleries
+* Image watermark
+* Admin bar
 * Microdata
-* Google Author Support
-* IE9 Pinned Site Support
-* Blog Mentions
+* Google Author support
+* IE9 pinned site support
+* Blog mentions
+* Finer control of Header / Sidebar links
 
 If you'd like to help out with any of these features, let me know!
 
-A current version of Quill can be found at:
+If you'd like to see Quill in action, a current version is running the development blog:
 
 http://quill.heroku.com
 
-I may use that as a development blog as well, I'm not entirely sure at the moment.
+------------
+Ian Mitchell
