@@ -1,4 +1,10 @@
 Quill::Application.routes.draw do
+
+  match '/archives' => 'archives#index'
+  match '/archives/category/:category' => 'archives#category'
+  match '/archives/date/:year' => 'archives#date'
+  match '/archives/date/:year/:month' => 'archives#date'
+
   resources :pages
 
   match '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
