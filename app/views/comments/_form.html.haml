@@ -1,0 +1,17 @@
+= form_for([@post, @post.comments.build], :remote => true) do |f|
+  #comment-left
+    %p
+      = f.label :name
+      = f.text_field :name
+    %p
+      = f.label :email
+      = f.text_field :email
+    %p
+      = f.label :website
+      = f.text_field :website
+  #comment-right
+    %p
+      = f.label :content
+      = f.text_area :content
+    %p
+      = f.submit

@@ -1,0 +1,11 @@
+.comment
+  = image_tag(comment.gravatar_url)
+  %span 
+    Posted by 
+    - if comment.website
+      = link_to comment.name, comment.website
+    - else
+      = comment.name
+    on
+    = comment.created_at.strftime('%m.%d.%Y')
+  %p= comment.content

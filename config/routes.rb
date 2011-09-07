@@ -2,7 +2,9 @@ Quill::Application.routes.draw do
   resources :pages
 
   match '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   devise_for :authors
   
