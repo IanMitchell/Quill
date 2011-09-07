@@ -1,0 +1,11 @@
+/* TEAM */
+	Creator: Ian Mitchell
+	Site: http://blog.centasm.net
+	Twitter: @IanMitchel1
+	From: Seattle, Washington
+
+/* SITE */
+	Github: *link*
+	Components: Ruby on Rails, HAML, SCSS, jQuery
+	Software: Textmate, Photoshop CS3, Internet Explorer, Safari, Chrome, Firefox, Github for Mac, Terminal
+	OS: OSX Lion, Windows 7
