@@ -8,6 +8,6 @@
 
 Author.create(email: 'test@test.com', password: 'admin')
 Category.create(name: 'General')
-Post.create(title: 'Hello World!', )
-PostCategory.create(post_id: 1, category_id: 1, author_id: 1, content: "Hello World, from Quill!")
+Post.create(title: 'Hello World!', author_id: 1, content: "Hello World, from Quill!")
+PostCategory.create(post_id: 1, category_id: 1)
 Page.create(title: 'About Us', content: 'This is a test page', header: 1, sidebar: 1, rank: 1)
