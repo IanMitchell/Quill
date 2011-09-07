@@ -1,10 +1,10 @@
-= Quill
+# Quill
 
 Quill is a blogging platform. Just something I'm cooking to learn Rails really. If you see any coding errors or something that doesn't follow a best practice / could be written more clearly, please let me know!
 
 It should be noted that this is still very much in development at the moment, and shouldn't be used as a live website. For instance, authors don't have names yet. Hopefully soon we'll be able to offer a stable release however!
 
-=== Future Plans
+### Future Plans
 * Inline comment moderation
 * Ajax Comments
 * Admin backend
