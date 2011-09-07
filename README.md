@@ -14,6 +14,7 @@ It should be noted that Quill is still very much in development, and shouldn't b
 
 ### Broken Features
 
+* SCSS Theme is horribly organized and in the middle of being refactored
 * Twitter integration is currently broken (Twitter gem randomly crashes?)
 * All Comment fields currently required 
 
