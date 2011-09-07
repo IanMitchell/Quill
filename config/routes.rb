@@ -1,7 +1,11 @@
 Quill::Application.routes.draw do
+  get "homepage/index"
+
   resources :pages
 
   devise_for :authors
+  
+  root :to => 'homepage#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

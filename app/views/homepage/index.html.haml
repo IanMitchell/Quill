@@ -1,0 +1,23 @@
+%section.content
+  = image_tag('profile.png')
+  %h2 Ian Mitchell
+  %p My name is Ian Mitchell
+  
+%section#blog-roll
+  %ul#nav
+    %li.active 
+      = link_to "", "#", 'data-skip-pjax' => true
+      
+    - (@posts.count - 1).times do ||
+      %li
+        = link_to "", "#", 'data-skip-pjax' => true  
+    
+  %article.post.selected
+    %h2= link_to @posts.first.title, post_url(@posts.first)
+    %p= @posts.first.excerpt
+    
+  - @posts.shift
+  - @posts.each do |post|  
+    %article.post
+      %h2= link_to post.title, post_url(post)
+      %p= post.content
