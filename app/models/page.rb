@@ -6,7 +6,7 @@ class Page < ActiveRecord::Base
   
   validates :content,   :presence => true
   
-  validates :order,     :uniqueness => true,
+  validates :rank,     :uniqueness => true,
                         :numericality => true
                         
   extend FriendlyId
