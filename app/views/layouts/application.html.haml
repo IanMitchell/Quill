@@ -1,21 +1,21 @@
 !!! 5
 %html
   %head
-    %title 
+    %title
       Quill
       = yield :header
     = stylesheet_link_tag    'application'
     = javascript_include_tag 'application'
-    
+
     = auto_discovery_link_tag :atom, 'posts/feed'
     = auto_discovery_link_tag :rss, 'posts/feed.rss'
     %link{ :type => 'text/plain', :rel => 'author', :href => '/humans.txt' }
-    
+
     = csrf_meta_tags
 
   %body
     #wrapper
-    
+
       %header
         %h1= link_to "Quill", root_url
         %nav
@@ -26,11 +26,11 @@
 
       %p.notice= notice
       %p.alert= alert
-      
+
       %section#main
         %div(data-pjax-container)
           = yield
-    
+
       %aside
         = render :partial => 'pages/page', :collection => sidebar_pages
 
@@ -50,13 +50,14 @@
                     = link_to Date::ABBR_MONTHNAMES[month], archives_path + '/date/' + year + '/' + Date::MONTHNAMES[month]
                   - else
                     = Date::ABBR_MONTHNAMES[month]
-        
+
         #twitter
-          - #twitter = Twitter.user('IanMitchel1')
-          %p= #raw auto_link(twitter.status.text)
-          #triangle
-          = #link_to image_tag(twitter.profile_image_url), 'http://twitter.com/' + 'IanMitchel1'
+          - cache("tweets", :expires_in => 1.minute) do
+            - @twitter = Twitter.user("IanMitchel1")
+            %p= raw auto_link(@twitter.status.text)
+            #triangle
+            = link_to image_tag(@twitter.profile_image_url), 'http://twitter.com/' + @twitter.screen_name
           #copyright
-            %span 
-              &copy; Copyright 2011 Ian Mitchell. Based on 
+            %span
+              &copy; Copyright 2011 Ian Mitchell. Based on
               = link_to 'Quill', 'http://quill.herokuapp.com', { :target => '_blank' }

@@ -11,11 +11,11 @@ It should be noted that Quill is still very much in development, and shouldn't b
 * Post Categories
 * Archives that sort via Date and Category
 * Dynamic Header / Sidebar Page Links
+* Twitter Integration (with caching!)
 
 ### Broken Features
 
 * SCSS Theme is horribly organized and in the middle of being refactored
-* Twitter integration is currently broken (Twitter gem randomly crashes?)
 * All Comment fields currently required 
 
 ### Future Plans
@@ -45,6 +45,12 @@ It should be noted that Quill is still very much in development, and shouldn't b
 * Finer control of Header / Sidebar links
 
 If you'd like to help out with any of these features, let me know!
+
+#### Current Development
+
+Since I'm now at school, development has hit a bit of a standstill. This is still very much a project that I want to pursue however, and I'll be returning to it when I have time. I'll still be pushing updates occasionally!
+
+#### Conclusion
 
 If you'd like to see Quill in action, a current version is running the development blog:
 

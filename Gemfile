@@ -9,6 +9,7 @@ group :development do
   gem 'sqlite3'
 end
 
+# Heroku
 group :production do
   gem 'pg'
 end
@@ -30,13 +31,14 @@ gem 'haml'
 # Slugs
 gem 'friendly_id', '~> 4.0.0.beta8'
 
-# Users 
+# Users
 gem 'devise'
 gem 'gravtastic'
 
-# Twitter 
+# Twitter
 gem 'twitter'
 gem 'twitter-text'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
