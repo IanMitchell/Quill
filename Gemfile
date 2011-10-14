@@ -39,6 +39,9 @@ gem 'gravtastic'
 gem 'twitter'
 gem 'twitter-text'
 
+# Caching
+gem 'memcache-client'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
