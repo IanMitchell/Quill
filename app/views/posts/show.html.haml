@@ -3,22 +3,22 @@
 %article
   %header
     %h2= link_to @post.title, post_url(@post)
-  
-  %p= raw @post.content
-  
+
+  %p= markdown @post.content
+
   %footer
     .meta
-      %span 
+      %span
         Posted on
         = @post.created_at.strftime('%B %d, %Y') + '. '
         - if @post.created_at != @post.updated_at
-          Updated on 
+          Updated on
           = @post.updated_at.strftime('%B %d, %Y') + '. '
-        Categories: 
+        Categories:
         = raw @post.post_categories.map { |c| link_to c.category.name, archives_path + '/category/' + c.category.slug }.to_sentence
-  
+
   #comments
     %h3= pluralize @post.comments.count, 'Comment'
     = render :partial => 'comments/comment', :collection => @post.comments
-    
+
     = render :partial => 'comments/form'

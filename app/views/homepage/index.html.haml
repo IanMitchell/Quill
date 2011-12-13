@@ -2,22 +2,22 @@
   = #image_tag('profile.png')
   %h2 Quill?
   %p My name is Ian Mitchell, and I develop Quill. This is a quick showcase website that is still actively under development. Once Quill becomes more stable, the website and content will be updated.
-  
+
 %section#blog-roll
   %ul#nav
-    %li.active 
+    %li.active
       = link_to "", "#", 'data-skip-pjax' => true
-      
+
     - (@posts.count - 1).times do ||
       %li
-        = link_to "", "#", 'data-skip-pjax' => true  
-    
+        = link_to "", "#", 'data-skip-pjax' => true
+
   %article.post.selected
     %h2= link_to @posts.first.title, post_url(@posts.first)
-    %p= @posts.first.excerpt
-    
+    %p= markdown @posts.first.excerpt
+
   - @posts.shift
-  - @posts.each do |post|  
+  - @posts.each do |post|
     %article.post
       %h2= link_to post.title, post_url(post)
       %p= post.content

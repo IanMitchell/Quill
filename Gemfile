@@ -42,6 +42,11 @@ gem 'twitter-text'
 # Caching
 gem 'dalli'
 
+# Post Styling
+gem 'redcarpet'
+gem 'albino'
+gem 'nokogiri'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
