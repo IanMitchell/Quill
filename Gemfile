@@ -40,7 +40,7 @@ gem 'twitter'
 gem 'twitter-text'
 
 # Caching
-gem 'memcache-client'
+gem 'dalli'
 
 
 # Use unicorn as the web server
