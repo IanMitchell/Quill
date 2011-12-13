@@ -1,8 +1,8 @@
 .comment
   = image_tag(comment.gravatar_url)
-  %span 
-    Posted by 
-    - if comment.website
+  %span
+    Posted by
+    - unless comment.website.blank?
       = link_to comment.name, comment.website
     - else
       = comment.name
