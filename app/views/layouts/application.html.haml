@@ -27,9 +27,8 @@
       %p.notice= notice
       %p.alert= alert
 
-      %section#main
-        %div(data-pjax-container)
-          = yield
+      %section#main(data-pjax-container)
+        = yield
 
       %aside
         = render :partial => 'pages/page', :collection => sidebar_pages
@@ -47,7 +46,7 @@
               - (01..12).each do |month|
                 %dd
                   - if Post.where(:created_at => Time.parse("#{Date::MONTHNAMES[month]} #{year}")..(Time.parse("#{Date::MONTHNAMES[month]} #{year}") + 1.month)).exists?
-                    = link_to Date::ABBR_MONTHNAMES[month], archives_path + '/date/' + year + '/' + Date::MONTHNAMES[month]
+                    = link_to Date::ABBR_MONTHNAMES[month], archives_url + '/date/' + year + '/' + Date::MONTHNAMES[month]
                   - else
                     = Date::ABBR_MONTHNAMES[month]
 
