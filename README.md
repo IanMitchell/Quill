@@ -11,12 +11,13 @@ It should be noted that Quill is still very much in development, and shouldn't b
 * Post Categories
 * Archives that sort via Date and Category
 * Dynamic Header / Sidebar Page Links
-* Twitter Integration (with caching!)
+* Syntax highlighting
+* Markdown styled posts/pages
 
 ### Broken Features
 
 * SCSS Theme is horribly organized and in the middle of being refactored
-* All Comment fields currently required 
+* Twitter Integration / Caching *(Gem issue?)*
 
 ### Future Plans
 
@@ -31,7 +32,6 @@ It should be noted that Quill is still very much in development, and shouldn't b
 * JS form validations
 * Akismet spam protection
 * Draft support (autosaving?)
-* Syntax highlighting
 * Email options (new comment notification)
 * File upload
 * Thumbnail support
