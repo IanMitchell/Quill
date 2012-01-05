@@ -37,7 +37,7 @@
         #archives
           %h4 Post Archives
           %dl
-            - (start_year..Time.now.strftime("%Y")).each do |year|
+            - (start_year..Time.now.strftime("%Y")).reverse_each do |year|
               %dt
                 - if Post.where(:created_at => Time.parse("01 #{year}")..(Time.parse("01 #{year}") + 1.year)).exists?
                   = link_to year, archives_path + '/date/' + year
