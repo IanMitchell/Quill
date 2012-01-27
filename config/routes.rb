@@ -8,12 +8,13 @@ Quill::Application.routes.draw do
   resources :pages
 
   match '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
+
   resources :posts do
     resources :comments
   end
 
   devise_for :authors
-  
+
   root :to => 'homepage#index'
 
   # The priority is based upon order of creation:
