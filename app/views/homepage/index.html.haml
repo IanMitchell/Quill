@@ -20,4 +20,4 @@
   - @posts.each do |post|
     %article.post
       %h2= link_to post.title, post_url(post)
-      %p= post.content
+      %p= markdown post.content
