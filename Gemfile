@@ -28,6 +28,9 @@ gem 'jquery-rails'
 gem 'pjax_rails'
 gem 'slim'
 
+# Images
+gem 'carrierwave'
+
 # Slugs
 gem 'friendly_id', '~> 4.0.0.beta8'
 

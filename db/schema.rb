@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110907001134) do
+ActiveRecord::Schema.define(:version => 20120216221747) do
 
   create_table "authors", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20110907001134) do
     t.integer  "rank"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "icon"
   end
 
   add_index "pages", ["slug"], :name => "index_pages_on_slug", :unique => true

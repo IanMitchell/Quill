@@ -1,4 +1,4 @@
 figure.project
   = link_to page_url(page) do
-    img src=image_path("pages/" + page.slug + ".png")
-  figcaption= page.title
+    img src=page.icon.url
+    figcaption= page.title
