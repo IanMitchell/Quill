@@ -1,50 +1,50 @@
-!!! 5
-%html
-  %head
-    %title
-      Quill
+doctype html
+html
+  head
+    title
+      | Quill
       = yield :header
     = stylesheet_link_tag    'application'
     = javascript_include_tag 'application'
 
     = auto_discovery_link_tag :atom, 'posts/feed'
     = auto_discovery_link_tag :rss, 'posts/feed.rss'
-    %link{ :type => 'text/plain', :rel => 'author', :href => '/humans.txt' }
+    link type='text/plain' rel='author' href='/humans.txt'
 
     = csrf_meta_tags
 
-  %body
+  body
     #wrapper
 
-      %header
-        %h1= link_to "Quill", root_url
-        %nav
-          %ul
-            %li= link_to "Home", root_url
+      header
+        h1= link_to "Quill", root_url
+        nav
+          ul
+            li= link_to "Home", root_url
             - header_pages.each do |page|
-              %li= link_to page.title, page_url(page)
+              li= link_to page.title, page_url(page)
 
-      %p.notice= notice
-      %p.alert= alert
+      p.notice= notice
+      p.alert= alert
 
-      %section#main(data-pjax-container)
+      section#main(data-pjax-container)
         = yield
 
-      %aside
+      aside
         = render :partial => 'pages/page', :collection => sidebar_pages
 
-      %footer
+      footer
         #archives
-          %h4 Post Archives
-          %dl
+          h4 Post Archives
+          dl
             - (start_year..Time.now.strftime("%Y")).reverse_each do |year|
-              %dt
+              dt
                 - if Post.where(:created_at => Time.parse("01 #{year}")..(Time.parse("01 #{year}") + 1.year)).exists?
                   = link_to year, archives_path + '/date/' + year
                 - else
                   = year
               - (01..12).each do |month|
-                %dd
+                dd
                   - if Post.where(:created_at => Time.parse("#{Date::MONTHNAMES[month]} #{year}")..(Time.parse("#{Date::MONTHNAMES[month]} #{year}") + 1.month)).exists?
                     = link_to Date::ABBR_MONTHNAMES[month], archives_url + '/date/' + year + '/' + Date::MONTHNAMES[month]
                   - else
@@ -53,10 +53,10 @@
         #twitter
           - cache("tweets", :expires_in => 1.minute) do
             - @twitter = Twitter.user("IanMitchel1")
-            %p= raw auto_link(@twitter.status.text)
+            p= raw auto_link(@twitter.status.text)
             #triangle
             = link_to image_tag(@twitter.profile_image_url), 'http://twitter.com/' + @twitter.screen_name
           #copyright
-            %span
-              &copy; Copyright 2011 Ian Mitchell. Based on
+            span
+              | &copy; Copyright 2011 Ian Mitchell. Based on 
               = link_to 'Quill', 'http://quill.herokuapp.com', { :target => '_blank' }

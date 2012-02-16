@@ -26,7 +26,7 @@ end
 # Template
 gem 'jquery-rails'
 gem 'pjax_rails'
-gem 'haml'
+gem 'slim'
 
 # Slugs
 gem 'friendly_id', '~> 4.0.0.beta8'

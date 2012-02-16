@@ -1,0 +1,6 @@
+-provide :header, "| " + @page.title
+
+article
+  header
+    h2= link_to @page.title, page_url(@page)
+    p= markdown @page.content
