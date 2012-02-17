@@ -8,6 +8,6 @@ div class='comment' id=dom_id(comment)
       = comment.name
     |  on 
     = comment.created_at.strftime('%m.%d.%Y')
+    = link_to 'Delete', [comment.post, comment], :confirm => 'Are you sure?', :method => :delete, :remote => true, :class => 'moderation'
   p= comment.content
   div class="moderation"
-    = link_to 'Delete', [comment.post, comment], :confirm => 'Are you sure?', :method => :delete, :remote => true

@@ -60,7 +60,7 @@ textarea {
 	border: 1px solid #cccccc;
 	padding-left: 2px;
 	background: $theme-background-color;
-	width: 90%;
+	width: 99%; /* Not 100 cause of padding + border */
 	height: 107px;
 	margin-bottom: 10px;
 	

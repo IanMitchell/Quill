@@ -60,5 +60,9 @@
 
 	.moderation {
 		float: right;
+		font: {
+			weight: normal
+		};
+		display: none;
 	}
 }
