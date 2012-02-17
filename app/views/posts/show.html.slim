@@ -18,7 +18,7 @@ article
         = raw @post.post_categories.map { |c| link_to c.category.name, archives_path + '/category/' + c.category.slug }.to_sentence
 
   #comments
-    h3= pluralize @post.comments.count, 'Comment'
+    h3= comment_count
     = render :partial => 'comments/comment', :collection => @post.comments
 
     = render :partial => 'comments/form'
