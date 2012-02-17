@@ -7,5 +7,5 @@
 /* SITE */
   Github: https://github.com/IanMitchell/Quill
   Components: Ruby on Rails, HAML, SCSS, jQuery
-  Software: Textmate, Photoshop CS3, Internet Explorer, Safari, Chrome, Firefox, Github for Mac, Terminal
+  Software: Textmate, Sublime Text 2, Photoshop, Internet Explorer, Safari, Chrome, Firefox, Github for Mac, Terminal, Mou
   OS: OSX Lion, Windows 7
