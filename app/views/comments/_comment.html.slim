@@ -1,5 +1,5 @@
-.comment
-  = image_tag(comment.gravatar_url)
+div class='comment' id=dom_id(comment)
+  img src=comment.gravatar_url
   span
     | Posted by 
     - unless comment.website.blank?

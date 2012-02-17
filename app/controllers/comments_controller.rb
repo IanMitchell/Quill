@@ -1,17 +1,13 @@
 class CommentsController < ApplicationController
+  respond_to :html, :js
+
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new(params[:comment])
     
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to post_path(@post) }
-        format.js
-      else
-        format.html { redirect_to post_path(@post) }
-        format.js
-      end
-    end
+    @comment.save
+
+    respond_with @comment, :location => posts_path(@post)
   end
 
   # DELETE /comments/1
