@@ -9,3 +9,5 @@ div class='comment' id=dom_id(comment)
     |  on 
     = comment.created_at.strftime('%m.%d.%Y')
   p= comment.content
+  div class="moderation"
+    = link_to 'Delete', [comment.post, comment], :confirm => 'Are you sure?', :method => :delete, :remote => true
