@@ -1,4 +1,6 @@
 = form_for([@post, @post.comments.build], :remote => true) do |f|
+  #errors
+    = f.error_messages
   #comment-left
     p
       = f.label :name
