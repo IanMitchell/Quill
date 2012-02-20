@@ -31,7 +31,8 @@ html
         = yield
 
       aside
-        = render :partial => 'pages/page', :collection => sidebar_pages
+        - cache("sidebar", :expires_in => 1.day) do
+          = render :partial => 'pages/page', :collection => sidebar_pages
 
       footer
         #archives
