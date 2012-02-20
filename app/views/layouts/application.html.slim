@@ -59,7 +59,6 @@ html
             #triangle
             = link_to image_tag(@twitter.profile_image_url), 'http://twitter.com/' + @twitter.screen_name
           #copyright
-            - time = Time.new
             span
-              | &copy; Copyright #{time.year} Ian Mitchell. Based on 
+              | &copy; Copyright #{Time.new.strftime("%Y")} Ian Mitchell. Based on 
               = link_to 'Quill', 'http://quill.herokuapp.com', { :target => '_blank' }
