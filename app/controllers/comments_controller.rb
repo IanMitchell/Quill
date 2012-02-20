@@ -11,11 +11,13 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:post_id])
-    @comment = @post.comments.find(params[:id])
+    if author_signed_in?
+      @post = Post.find(params[:post_id])
+      @comment = @post.comments.find(params[:id])
 
-    @comment.destroy
+      @comment.destroy
 
-    respond_with @comment, :location => posts_path(@post)
+      respond_with @comment, :location => posts_path(@post)
+    end
   end
 end
