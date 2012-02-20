@@ -36,19 +36,20 @@ html
       footer
         #archives
           h4 Post Archives
-          dl
-            - (start_year..Time.now.strftime("%Y")).reverse_each do |year|
-              dt
-                - if Post.where(:created_at => Time.parse("01 #{year}")..(Time.parse("01 #{year}") + 1.year)).exists?
-                  = link_to year, archives_path + '/date/' + year
-                - else
-                  = year
-              - (01..12).each do |month|
-                dd
-                  - if Post.where(:created_at => Time.parse("#{Date::MONTHNAMES[month]} #{year}")..(Time.parse("#{Date::MONTHNAMES[month]} #{year}") + 1.month)).exists?
-                    = link_to Date::ABBR_MONTHNAMES[month], archives_url + '/date/' + year + '/' + Date::MONTHNAMES[month]
+          - cache("archives", :expires_in => 1.day) do
+            dl
+              - (start_year..Time.now.strftime("%Y")).reverse_each do |year|
+                dt
+                  - if Post.where(:created_at => Time.parse("01 #{year}")..(Time.parse("01 #{year}") + 1.year)).exists?
+                    = link_to year, archives_path + '/date/' + year
                   - else
-                    = Date::ABBR_MONTHNAMES[month]
+                    = year
+                - (01..12).each do |month|
+                  dd
+                    - if Post.where(:created_at => Time.parse("#{Date::MONTHNAMES[month]} #{year}")..(Time.parse("#{Date::MONTHNAMES[month]} #{year}") + 1.month)).exists?
+                     = link_to Date::ABBR_MONTHNAMES[month], archives_url + '/date/' + year + '/' + Date::MONTHNAMES[month]
+                    - else
+                      = Date::ABBR_MONTHNAMES[month]
 
         #twitter
           - cache("tweets", :expires_in => 1.minute) do
@@ -57,6 +58,7 @@ html
             #triangle
             = link_to image_tag(@twitter.profile_image_url), 'http://twitter.com/' + @twitter.screen_name
           #copyright
+            - time = Time.new
             span
-              | &copy; Copyright 2011 Ian Mitchell. Based on 
+              | &copy; Copyright #{time.year} Ian Mitchell. Based on 
               = link_to 'Quill', 'http://quill.herokuapp.com', { :target => '_blank' }
