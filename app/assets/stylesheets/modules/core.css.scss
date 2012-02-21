@@ -1,10 +1,11 @@
 @import '../partials/color';
 @import '../partials/size';
+@import '../partials/style';
 
 
 * {
-  padding: $reset;
-  margin: $reset;
+  padding: 0px;
+  margin: 0px;
 }
 
 html {
@@ -13,15 +14,14 @@ html {
 
 body {
   font-family: 'Segoe UI', 'Lucida Grande', Arial, Helvetica, Verdana, MS Sans Serif; 
-  font-size: $website-font-size; 
-  color: $theme-text-color;
-  background-color: $theme-background-color;
-  border-top: $body-border-width solid $theme-highlight-color;
+  font-size: 12px; 
+  color: $theme-text;
+  background-color: $theme-background;
+  border-top: 10px solid $theme;
 }
 
 #wrapper {
-	width: $website-width;
-	margin: auto;
+	@include wrapper($website-width);
 }
 
 #main {
@@ -34,31 +34,31 @@ a {
 	&:link,
 	&:visited {
 		text-decoration: none;
-	  color: $theme-link-color;
+	  color: $theme-link;
 	}
 	
 	&:hover,
 	&:active,
 	&:focus {
 		text-decoration: underline;
-	  color: $theme-link-highlight-color;
+	  color: $theme-link-highlight;
 	}
 	
 	img {
-		border: $reset;
+		border: 0px;
 	}
 }
 
 blockquote {
-	margin: $blockquote-margin;
-	border-left: $blockquote-border-left solid $theme-text-highlight-color;
-	padding-left: $blockquote-padding-left;
-	color: $theme-text-highlight-color;
+	margin: 0px 0px 30px 30px;
+	border-left: 2px solid $theme-text-highlight;
+	padding-left: 15px;
+	color: $theme-text-highlight;
 	
 	cite {
 		display: block;
 		font-style: oblique;
-		padding-top: $blockquote-cite-padding-top;
+		padding-top: 15px;
 	}
 }
 

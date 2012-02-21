@@ -1,14 +1,12 @@
-@import 'partials/size';
-
 footer {
-	margin-bottom: $footer-margin-bottom;
+	margin-bottom: 50px;
 	overflow: auto;
 	clear: both;
 	display: block;
 	
 	#copyright{
 		span {
-			font-size: $copyright-font-size;
+			font-size: 10px;
 			float: right;
 		}
 	} 

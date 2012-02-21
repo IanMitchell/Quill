@@ -1,14 +1,17 @@
-@mixin static-link($color, $decoration) {	
-	a {
-		&:link,
-		&:visited,
-		&:hover,
-		&:active,
-		&:focus {
-			color: $color;
-			text-decoration: $decoration;
-		}
-	}
+@mixin static-link($color, $highlight, $underline: none, $hover: none) {
+  a {
+    &:link,
+    &:visited {
+      color: $color;
+      text-decoration: $underline;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $highlight;
+      text-decoration: $hover;
+    }
+  }
 }
 
 @mixin linear-gradient($start, $stop) {
@@ -16,4 +19,9 @@
 	background-image: -o-linear-gradient($start, $stop);
 	background-image: -webkit-linear-gradient($start, $stop);
 	background-image: linear-gradient(top, $start, $stop);
+}
+
+@mixin wrapper($width) {
+	width: $width;
+	margin: auto;
 }

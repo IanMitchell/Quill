@@ -7,32 +7,25 @@ article {
 	overflow: hidden;
 	
 	header {
-		margin-top: $reset;
+		margin-top: 0px;
 		
 		h2 {
 			font-weight: normal;
 			text-transform: uppercase;
-			font-size: $article-header-title-font-size;
-			margin-bottom: $article-header-title-margin-bottom;
+			font-size: 36px;
+			margin-bottom: 10px;
 			
-			@include static-link($theme-text-color, none);
+			@include static-link($theme-text, $theme-text);
 		}
 		
 		span {
-			margin: $article-header-meta-margin;
+			margin: 0px 0px 10px 0px;
 			display: block;
 		}
 		
 		time {
 			font-style: oblique;
 		}
-	}
-	
-	.thumbnail {
-		float: left;
-		width: $article-thumbnail-size;
-		height: $article-thumbnail-size;
-		margin: $article-thumbnail-margin;
 	}
 	
 	.aligncenter {
@@ -45,31 +38,31 @@ article {
 	}
 	
 	p {
-		line-height: $article-text-line-height;
-		margin-bottom: $article-text-margin-bottom;
+		line-height: 170%;
+		margin-bottom: 5px;
 	}
 	
 	ul {
-	    margin-left: $article-list-margin-left;
+	    margin-left: 35px;
 	    list-style: square;
 	
 			li {
-			    margin-bottom: $article-list-item-margin-bottom;
+			    margin-bottom: 5px;
 			}
 	}
 	
 	h4 {
 		text-transform: uppercase;
-		border-bottom: $article-subtitle-border-bottom solid $theme-text-color;
-		margin-bottom: $article-subtitle-margin-bottom;
-		padding: $article-subtitle-padding;
-		font-size: $article-subtitle-font-size;
+		border-bottom: 3px solid $theme-text;
+		margin-bottom: 20px;
+		padding: 10px 0px 3px 0px;
+		font-size:16px;
 	}
 	
 	footer {
 		overflow: hidden;
-		border-top: $article-footer-border-top solid $theme-text-highlight-color;
-		padding: $article-footer-padding;
+		border-top: 1px solid $theme-text-highlight;
+		padding: 5px 0px 0px 0px;
 		
 		.meta {
 			float: left;

@@ -1,5 +1,4 @@
 @import '../partials/color';
-@import '../partials/size';
 @import '../partials/style';
 
 label {
@@ -25,8 +24,8 @@ input[type="submit"] {
 	&:active,
 	&:hover,
 	&:focus {
-		border: 1px solid $theme-highlight-color;
-		outline: $reset;
+		border: 1px solid $theme;
+		outline: 0px;
 		@include linear-gradient(#eaeaea, #d4d4d4);
 	}
 	
@@ -44,28 +43,29 @@ input[type="url"] {
 	width: 220px;
 	padding-left: 2px;
 	height: 19px;
-	background: $theme-background-color;
+	background: $theme-background;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="url"] {
 	&:focus {
-		border: 1px solid $theme-highlight-color;
-		outline: none;
+		border: 1px solid $theme;
+		outline: 0px;
 	}	
 }
 
 textarea {
 	border: 1px solid #cccccc;
+	display: block;
 	padding-left: 2px;
-	background: $theme-background-color;
+	background: $theme-background;
 	width: 99%; /* Not 100 cause of padding + border */
 	height: 107px;
 	margin-bottom: 10px;
 	
 	&:focus {
-		border: 1px solid $theme-highlight-color;
-		outline: none;	
+		border: 1px solid $theme;
+		outline: 1px;
 	}
 }

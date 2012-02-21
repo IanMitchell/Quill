@@ -1,17 +1,16 @@
-@import '../partials/size';
 @import '../partials/color';
 
 #archives {
-	width: $archives-width;
+	width: 60%;
 	float: left;
 	
 	h4 {
-	  border-top: $archives-title-border-top solid $theme-highlight-color;
-		font-size: $archives-title-font-size;
+	  border-top: 10px solid $theme;
+		font-size: 36px;
 		font-weight: normal;
 		text-transform: uppercase;
-		padding-top: $archives-title-padding-top;
-		margin: $archives-title-margin;
+		padding-top: 10px;
+		margin: 20px 0px 10px 0px;
 	}
 	
 	dl {
@@ -19,20 +18,20 @@
 	  overflow: auto;
 	
 		dt {
-			width: $archives-year-width;
+			width: 9%;
 			float: left;
 			clear: both;
-			padding: $archives-year-padding;
+			padding: 8px 0px 8px 0px;
 			font-weight: bold;
-			color: $theme-text-highlight-color;
-			border-right: $archives-year-border-right solid $theme-text-highlight-color;
+			color: $theme-text-highlight;
+			border-right: 2px solid $theme-text-highlight;
 		}
 		
 		dd {
-			width: $archives-month-width;
+			width: 7.5%;
 			float: left;
-			padding: $archives-month-padding;
-			color: $theme-text-highlight-color;
+			padding: 8px 0px 8px 0px;
+			color: $theme-text-highlight;
 		}
 	}
 }

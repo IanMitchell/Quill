@@ -1,29 +1,28 @@
 @import '../partials/color';
-@import '../partials/size';
 
 #twitter {
-	width: $twitter-width;
+	width: 40%;
 	float: left;
 	
 	p {
-	  background: $theme-highlight-color;
-	  color: $theme-background-color;
-	  padding: $twitter-status-padding;
-	  margin: $twitter-status-margin;
+	  background: $theme;
+	  color: $theme-background;
+	  padding: 15px;
+	  margin: 20px 0px 0px 20px;
 	}
 
 	#triangle {
-	  font-size: $reset;
-	  line-height: $reset; 
-	  width: $reset;
-	  border-top: $twitter-triangle-width solid $theme-highlight-color;
-	  border-left: $twitter-triangle-width solid $theme-background-color;
-	  margin: $twitter-triangle-margin;
+	  font-size: 0px;
+	  line-height: 0px; 
+	  width: 0px;
+	  border-top: 20px solid $theme;
+	  border-left: 20px solid $theme-background;
+	  margin: 0px 10px 0px 40px;
 	  float: left;
 	}
 
 	img {
-	  margin-top: $twitter-avatar-margin-top;
+	  margin-top: 10px;
 	  vertical-align: middle;
 	}
 }

@@ -1,29 +1,28 @@
 @import '../partials/color';
-@import '../partials/size';
 @import '../partials/style';
 
 header {
 	h1 {
 	  text-transform: lowercase;
-	  font-size: $header-font-size;
+	  font-size: 140px;
 		float: left;
-		margin-top: $header-margin-top;
+		//margin-top: -25px;
 		
-		@include static_link($theme-highlight-color, none);
+		@include static_link($theme, $theme);
 	}
 	
 	nav {
 		float: right;
-		margin-top: $header-nav-margin-top;
+		margin-top: 65px;
 		
 		ul {
-				list-style: none;
-				
-				li {
-					float: left;
-					margin-left: $header-nav-link-margin-left;
-					font-size: $header-nav-link-font-size;
-				}
+			list-style: none;
+			
+			li {
+				float: left;
+				margin-left: 35px;
+				font-size: 24px;
+			}
 		}
 	}
 }

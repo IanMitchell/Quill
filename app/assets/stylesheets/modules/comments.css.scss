@@ -3,27 +3,27 @@
 
 #comments {
 	h3 {
-		font-size: $comment-title-font-size;
-		margin: $comment-title-margin;
+		font-size: 24px;
+		margin: 30px 0px 20px 0px;
 	}
 	
 	.comment {
 		display: block;
 		clear: both;
 		overflow: auto;
-		border-bottom: $comment-border-bottom solid $theme-text-highlight-color;
-		padding: $comment-padding;
+		border-bottom: 1px solid $theme-text-highlight;
+		padding: 10px 10px 10px 0px;
 		
 		img {
 			float: left;
-			height: $comment-avatar-size;
-			width: $comment-avatar-size;
-			margin: $comment-avatar-margin;
+			height: $avatar-size;
+			width: $avatar-size;
+			margin: 0px 10px 10px 0px;
 		}
 		
 		span {
 			display: block;
-			margin-bottom: $comment-meta-margin-bottom;
+			margin-bottom: 10px;
 			font-weight: bold;
 			
 			a {
@@ -32,30 +32,26 @@
 		}
 		
 		p {
-			margin-bottom: $comment-text-margin-bottom;
-			width: $comment-text-width;
+			margin-bottom: 20px;
+			width: $comment-width;
 			float: right;
 		}
 	}
 	
-	.author {
-		background: $theme-author-highlight-color;
-	}
-	
 	#comment-left{
-		width: $comment-form-left-width;
+		width: 40%;
 		float: left;
 		overflow: hidden;
 	}
 
 	#comment-right {
-		width: $comment-form-right-width;
+		width: 60%;
 		float: left;
 		overflow: hidden;
 	}
 	
 	p {
-		margin-bottom: $reset;
+		margin-bottom: 0px;
 	}
 
 	.moderation {
