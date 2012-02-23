@@ -13,7 +13,11 @@ class Post < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, :use => :slugged
   
-  
+
+  def article
+    self.content.gsub('<!--excerpt-->', '')
+  end
+
   def excerpt
     self.content.split('<!--excerpt-->')[0]
   end
