@@ -1,17 +1,17 @@
 <% if @comment.errors.any? %>
-  $('#errors').slideUp( ->
-    $('#errors').html ''
+  $('#comment-errors').slideUp( ->
+    $('#comment-errors').html ''
     $('<%= escape_javascript error_messages_for(@comment) %>')
-    .appendTo('#errors')
+      .appendTo('#comment-errors')
   )
-  $('#errors').slideDown()
+  $('#comment-errors').slideDown()
 <% else %>
   $('<%= escape_javascript render(@comment) %>')
     .hide()
     .insertBefore('#new_comment')
     .slideDown()
 
-  $('#errors').slideUp()
+  $('#comment-errors').slideUp()
   
   $('#new_comment')[0].reset()
 
