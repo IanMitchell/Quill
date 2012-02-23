@@ -1,9 +1,11 @@
 Quill::Application.routes.draw do
 
+  # Gotta be a better way to do this
   match '/archives' => 'archives#index'
   match '/archives/category/:category' => 'archives#category'
   match '/archives/date/:year' => 'archives#date'
   match '/archives/date/:year/:month' => 'archives#date'
+
 
   resources :pages
 
@@ -13,7 +15,11 @@ Quill::Application.routes.draw do
     resources :comments
   end
 
-  devise_for :authors
+  devise_for :authors do
+    get 'login' => 'devise/sessions#new'
+    post 'login' => 'devise/sessions#create'
+    get 'logout' => 'devise/sessions#destroy'
+  end
 
   root :to => 'homepage#index'
 
