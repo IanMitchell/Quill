@@ -14,7 +14,7 @@ class ArchivesController < ApplicationController
       date = Time.parse("#{params[:month]} #{params[:year]}")
       @posts = Post.where(:created_at => date..(date + 1.month))
     else
-      date = Time.parse("01 #{params[:year]}")
+      date = Time.parse("January #{params[:year]}")
       @posts = Post.where(:created_at => date..(date + 1.year))
     end
     render :index
