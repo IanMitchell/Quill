@@ -36,7 +36,7 @@ class PagesController < ApplicationController
     if author_signed_in?
       @page = Page.new(params[:page])
 
-      @post.save
+      @page.save
 
       respond_with @page, :location => pages_path(@page)
     end

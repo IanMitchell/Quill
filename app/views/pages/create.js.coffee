@@ -1,4 +1,4 @@
-<% if @post.errors.any? %>
+<% if @page.errors.any? %>
   $('#page-errors').slideUp( ->
     $('#page-errors').html ''
     $('<%= escape_javascript error_messages_for(@page) %>')
