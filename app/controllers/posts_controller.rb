@@ -38,7 +38,7 @@ class PostsController < ApplicationController
 
       @post.save
 
-      respond_with @post, :location => posts_path(@post)
+      respond_with @post
     end
   end
 

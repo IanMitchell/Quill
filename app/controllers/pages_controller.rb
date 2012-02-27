@@ -38,7 +38,7 @@ class PagesController < ApplicationController
 
       @page.save
 
-      respond_with @page, :location => pages_path(@page)
+      respond_with @page
     end
   end
 

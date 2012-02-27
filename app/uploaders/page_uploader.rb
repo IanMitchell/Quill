@@ -32,8 +32,6 @@ class PageUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-  process :resize_to_fill => [100, 100]
-
   # Create different versions of your uploaded files:
   # version :thumb do
   #   process :scale => [50, 50]

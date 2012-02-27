@@ -1,5 +1,4 @@
 class Page < ActiveRecord::Base
-  
   validates :title,     :presence => true,
                         :uniqueness => true,
                         :length => { :minimum => 3, :maximum => 75 }
