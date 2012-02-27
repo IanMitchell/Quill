@@ -15,14 +15,14 @@ html
 
   body
     #wrapper
-
       header
         h1= link_to "Quill", root_url
         nav
-          ul
-            li= link_to "Home", root_url
-            - header_pages.each do |page|
-              li= link_to page.title, page_url(page)
+          - cache("header", :expires_in => 1.day) do
+            ul
+              li= link_to "Home", root_url
+              - header_pages.each do |page|
+                li= link_to page.title, page_url(page)
 
       p.notice= notice
       p.alert= alert
@@ -62,3 +62,7 @@ html
             span
               | &copy; Copyright #{Time.new.strftime("%Y")} Ian Mitchell. Based on 
               = link_to 'Quill', 'http://quill.herokuapp.com', { :target => '_blank' }
+
+    - if author_signed_in?
+      = render 'posts/new'
+      = render 'pages/new'
