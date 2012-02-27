@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  # GET /posts
-  # GET /posts.json
+  respond_to :html, :js
+
   def index
     @posts = Post.all
 
@@ -10,8 +10,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/1
-  # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
 
@@ -21,8 +19,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/new
-  # GET /posts/new.json
   def new
     @post = Post.new
 
@@ -32,29 +28,20 @@ class PostsController < ApplicationController
     end
   end
 
-  # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
   end
 
-  # POST /posts
-  # POST /posts.json
   def create
-    @post = Post.new(params[:post])
+    if author_signed_in?
+      @post = Post.new(params[:post])
 
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render json: @post, status: :created, location: @post }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
+      @post.save
+
+      respond_with @post, :location => posts_path(@post)
     end
   end
 
-  # PUT /posts/1
-  # PUT /posts/1.json
   def update
     @post = Post.find(params[:id])
 
@@ -69,8 +56,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
