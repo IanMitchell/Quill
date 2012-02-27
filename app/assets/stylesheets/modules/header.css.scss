@@ -2,11 +2,13 @@
 @import '../partials/style';
 
 header {
+	margin-top: 10px;
+	
 	h1 {
 	  text-transform: lowercase;
 	  font-size: 140px;
 		float: left;
-		//margin-top: -25px;
+		margin-top: -25px;
 		
 		@include static_link($theme, $theme);
 	}
