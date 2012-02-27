@@ -1,0 +1,26 @@
+div id='newPage' class='reveal-modal'
+  h1 New Page
+
+  = form_for(@new_page, :remote => true) do |f|
+    #errors
+      = f.error_messages
+
+    p
+      = f.label :title
+      = f.text_field :title
+    p
+      = f.label :icon
+      = f.file_field :icon
+    p
+      = f.label :header
+      = f.check_box :header
+    p
+      = f.label :sidebar
+      = f.check_box :sidebar
+    p
+      = f.label :content
+      = f.text_area :content
+    p
+      = f.submit
+
+  a class='close-reveal-modal' &#215;

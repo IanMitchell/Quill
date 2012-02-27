@@ -1,0 +1,53 @@
+@import '../partials/color';
+@import '../partials/size';
+@import '../partials/style';
+
+#admin {
+  background: $theme;
+  color: $theme-background;
+  height: 30px;
+  display: block;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  img {
+    margin: 5px 10px 0px 10px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $theme-background;
+    float: left;
+  }
+
+  ul {
+    list-style: none;
+    overflow: auto;
+    display: block;
+    height: 30px;
+
+    li {
+      float: left;
+      display: block;
+
+      a {
+        display: block;
+        height: 28px;
+        padding: 7px 10px 0px 10px;
+
+        &:link,
+        &:visited {
+          color: $theme-background;
+          text-decoration: none;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+          background: $theme-link;
+          color: $theme-background;
+        }
+      }
+    }
+  }
+}

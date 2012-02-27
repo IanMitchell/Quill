@@ -1,0 +1,22 @@
+div id='newPost' class='reveal-modal'
+  h1 New Post
+
+  = form_for(@new_post, :remote => true) do |f|
+    #post-errors
+      = f.error_messages
+
+    p
+      = f.label :title
+      = f.text_field :title
+
+    p
+      = f.label :content
+      = f.text_area :content
+
+    p Categories and Image Uploads... coming soon!
+    br
+
+    p
+      = f.submit
+
+  a class='close-reveal-modal' &#215;
