@@ -60,5 +60,5 @@ Quill::Application.configure do
   config.active_support.deprecation = :notify
 
   # Devise on Heroku
-  config.assets.initialize_on_precompile = false
+  #config.assets.initialize_on_precompile = false
 end
