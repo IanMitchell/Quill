@@ -13,36 +13,39 @@ It should be noted that Quill is still very much in development, and shouldn't b
 * Dynamic Header / Sidebar Page Links
 * Syntax highlighting
 * Markdown styled posts/pages
+* Inline comment moderation
+* JS form validations *(Uses Ajax)*
+* Localstorage autosaving
+
+### Features in Progress
+
+* Admin bar
+* Finer control of Header / Sidebar links
+* Email options (new comment notification)
+* Author name / Twitter handle
 
 ### Broken Features
 
-* SCSS Theme is horribly organized and in the middle of being refactored
 * Twitter Integration / Caching *(Gem issue?)*
 
 ### Future Plans
 
-* Author name / Twitter handle
 * Multiple author support
 * Multiple Twitter account support
-* Inline comment moderation
 * Comment credential storage
 * Admin backend
 * XML-RPC server
 * Tests!
-* JS form validations
 * Akismet spam protection
 * Draft support (autosaving?)
-* Email options (new comment notification)
 * File upload
 * Thumbnail support
 * Image galleries
 * Image watermark
-* Admin bar
 * Microdata
 * Google Author support
 * IE9 pinned site support
 * Blog mentions
-* Finer control of Header / Sidebar links
 
 If you'd like to help out with any of these features, let me know!
 
