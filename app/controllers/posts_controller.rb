@@ -35,7 +35,8 @@ class PostsController < ApplicationController
   def create
     if author_signed_in?
       @post = Post.new(params[:post])
-
+      @post.author = current_author
+      
       @post.save
 
       respond_with @post
