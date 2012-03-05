@@ -1,19 +1,16 @@
 <% if @post.errors.any? %>
-  $('#post-errors').slideUp( ->
-    $('#post-errors').html ''
+  $('#new-post-errors').slideUp( ->
+    $('#new-post-errors').html ''
     $('<%= escape_javascript error_messages_for(@post) %>')
-      .appendTo('#post-errors')
+      .appendTo('#new-post-errors')
   )
-  $('#post-errors').slideDown()
+  $('#new-post-errors').slideDown()
 <% else %>
-  $('#new_post')[0].reset()
-
-  # Cancel Modal (?)
-  # Notification it was posted
 
   # Remove local storage / cookie
   window.Store.expire 'post-title'
   window.Store.expire 'post-content'
   
-  # Redirect to post (?)
+  # Redirect to post
+  window.location = '<%= post_url(@post) %>'
 <% end %>
