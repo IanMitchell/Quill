@@ -57,9 +57,11 @@ class PagesController < ApplicationController
   end
 
   def destroy
-    @page = Page.find(params[:id])
-    @page.destroy
+    if author_signed_in?
+      @page = Page.find(params[:id])
+      @page.destroy
 
-    respond_with @page
+      respond_with @page
+    end
   end
 end

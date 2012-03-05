@@ -54,10 +54,12 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
+    if author_signed_in?
+      @post = Post.find(params[:id])
+      @post.destroy
 
-    respond_with @post
+      respond_with @post
+    end
   end
   
   def feed
