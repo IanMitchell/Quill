@@ -1,6 +1,10 @@
 module ApplicationHelper
   include Twitter::Autolink
 
+  def site_title
+    "Quill"
+  end
+
   def header_pages
     Page.all(:order => 'rank', :conditions => { :header => true })
   end
