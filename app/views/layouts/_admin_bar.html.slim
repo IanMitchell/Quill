@@ -8,7 +8,17 @@
       li= link_to "New Page", "", "data-reveal-id" => "newPage"
       li= link_to "Reorder Pages", root_url
       - if @page
-        li= link_to "Edit Page", root_url
+        li= link_to "Edit Page", "", "data-reveal-id" => "editPage"
+        li= link_to 'Delete Page', @page, :confirm => 'Are you sure you want to delete this page?', :method => :delete, :remote => true
       - if @post
         li= link_to "Edit Post", "", "data-reveal-id" => "editPost"
+        li= link_to 'Delete Post', @post, :confirm => 'Are you sure you want to delete this post?', :method => :delete, :remote => true
+
       li= link_to "Logout", logout_url
+
+  - provide :admin do
+    = render 'posts/new'
+    = render 'pages/new'
+    / Doesn't Currently Update -- need a workaround
+    - if @post
+      = render 'posts/edit'

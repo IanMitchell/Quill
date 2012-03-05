@@ -1,9 +1,7 @@
 doctype html
 html
   head
-    title
-      | Quill 
-      = yield :header
+    title= site_title
     = stylesheet_link_tag    'application'
     = javascript_include_tag 'application'
 
@@ -63,6 +61,4 @@ html
               | &copy; Copyright #{Time.new.strftime("%Y")} Ian Mitchell. Based on 
               = link_to 'Quill', 'http://quill.herokuapp.com', { :target => '_blank' }
 
-    - if author_signed_in?
-      = render 'posts/new'
-      = render 'pages/new'
+    = yield :admin
