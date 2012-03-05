@@ -4,11 +4,11 @@
       img src=current_author.gravatar_url
     ul
       li= link_to current_author.email, root_url
-      li= link_to "New Post", root_url, "data-reveal-id" => "newPost"
-      li= link_to "New Page", root_url, "data-reveal-id" => "newPage"
+      li= link_to "New Post", "", "data-reveal-id" => "newPost"
+      li= link_to "New Page", "", "data-reveal-id" => "newPage"
       li= link_to "Reorder Pages", root_url
       - if @page
-        li= link_to "Edit Current Page", root_url
+        li= link_to "Edit Page", root_url
       - if @post
-        li= link_to "Edit Current Post", root_url
+        li= link_to "Edit Post", "", "data-reveal-id" => "editPost"
       li= link_to "Logout", logout_url
