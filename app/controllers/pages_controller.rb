@@ -60,9 +60,6 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
     @page.destroy
 
-    respond_to do |format|
-      format.html { redirect_to pages_url }
-      format.json { head :ok }
-    end
+    respond_with @page
   end
 end
