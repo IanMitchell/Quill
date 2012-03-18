@@ -16,10 +16,12 @@ It should be noted that Quill is still very much in development, and shouldn't b
 * Inline comment moderation
 * JS form validations *(Uses Ajax)*
 * Localstorage autosaving
+    * Precursor to Draft Support / Auto Saving
 
 ### Features in Progress
 
 * Admin bar
+    * Precursor to Admin Backend
 * Finer control of Header / Sidebar links
 * Email options (new comment notification)
 * Author name / Twitter handle
@@ -33,11 +35,9 @@ It should be noted that Quill is still very much in development, and shouldn't b
 * Multiple author support
 * Multiple Twitter account support
 * Comment credential storage
-* Admin backend
 * XML-RPC server
 * Tests!
 * Akismet spam protection
-* Draft support (autosaving?)
 * File upload
 * Thumbnail support
 * Image galleries
