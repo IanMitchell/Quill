@@ -4,21 +4,22 @@
       img src=current_author.gravatar_url
     ul
       li= link_to current_author.email, root_url
-      li= link_to "New Post", "", "data-reveal-id" => "newPost"
-      li= link_to "New Page", "", "data-reveal-id" => "newPage"
+      li= link_to "New Post", "", "data-reveal-id" => "newPost", "data-remote" => "data-remote"
+      li= link_to "New Page", "", "data-reveal-id" => "newPage", "data-remote" => "data-remote"
       li= link_to "Reorder Pages", root_url
       - if @page
-        li= link_to "Edit Page", "", "data-reveal-id" => "editPage"
-        li= link_to 'Delete Page', @page, :confirm => 'Are you sure you want to delete this page?', :method => :delete, :remote => true
+        li= link_to "Edit Page", "", "data-reveal-id" => "editPage", "data-remote" => "data-remote"
+        li= link_to 'Delete Page', @page, "data-remote" => "data-remote", :confirm => 'Are you sure you want to delete this page?', :method => :delete, :remote => true
       - if @post
-        li= link_to "Edit Post", "", "data-reveal-id" => "editPost"
-        li= link_to 'Delete Post', @post, :confirm => 'Are you sure you want to delete this post?', :method => :delete, :remote => true
+        li= link_to "Edit Post", "", "data-reveal-id" => "editPost", "data-remote" => "data-remote"
+        li= link_to 'Delete Post', @post, "data-remote" => "data-remote", :confirm => 'Are you sure you want to delete this post?', :method => :delete, :remote => true 
 
       li= link_to "Logout", logout_url
 
-  - provide :admin do
-    = render 'posts/new'
-    = render 'pages/new'
-    / Doesn't Currently Update -- need a workaround
-    - if @post
-      = render 'posts/edit'
+  = render 'posts/new'
+  = render 'pages/new'
+  - if @post
+    = render 'posts/edit'
+  / Not yet Implemented
+  /- if @page
+    /=render 'pages/edit'
