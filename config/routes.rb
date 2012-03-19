@@ -1,5 +1,7 @@
 Quill::Application.routes.draw do
 
+  match '/categories' => 'category#index'
+
   # Gotta be a better way to do this
   match '/archives' => 'archives#index'
   match '/archives/category/:category' => 'archives#category'
