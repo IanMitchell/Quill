@@ -43,16 +43,12 @@ class PagesController < ApplicationController
   end
 
   def update
-    @page = Page.find(params[:id])
+    if author_signed_in?
+      @page = Page.find(params[:id])
 
-    respond_to do |format|
-      if @page.update_attributes(params[:page])
-        format.html { redirect_to @page, notice: 'Page was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @page.errors, status: :unprocessable_entity }
-      end
+      @page.update_attributes(params[:page])
+
+      respond_with @page
     end
   end
 
