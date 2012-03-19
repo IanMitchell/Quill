@@ -4,6 +4,8 @@ tokenizeCategories = ->
       crossDomain: false
       prePopulate: $(this).data("pre")
       theme: "facebook"
+      hintText: "Type in a Category name..."
+      preventDuplicates: true
     return
   return
 
