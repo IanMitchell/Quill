@@ -24,7 +24,21 @@ class Post < ActiveRecord::Base
     self.content.split('<!--excerpt-->')[0]
   end
 
-  def category_tokens=(ids)
-    self.category_ids = ids.split(",")
+  # Existing Categories return an ID, while new
+  # ones return a String. 
+  def category_tokens=(tokens)
+    ids = Array.new
+    tokens.split(",").each do |c| 
+      if c.is_a? String
+        cat = Category.new
+        cat.name = c
+        cat.save
+        c = cat.id
+      end
+
+      ids.push(c)
+    end
+
+    self.category_ids = ids
   end
 end

@@ -1,0 +1,14 @@
+[
+  <% @categories.each_with_index do |c, index| %>
+    [
+      <%= c.id %>,
+      "<%= c.name %>",
+      null,
+      "<%= c.name %>"
+    <% if index == @categories.size - 1 %>
+      ]
+    <% else %>
+      ],
+    <% end %>
+  <% end %>
+]
