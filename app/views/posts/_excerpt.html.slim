@@ -9,7 +9,7 @@ article
     footer
       .meta
         span
-          | Categories:
+          | Categories: 
           = raw post.post_categories.map { |c| link_to c.category.name, archives_path + '/category/' + c.category.slug }.to_sentence
       span.readmore
         = link_to(post_url(post)) do
