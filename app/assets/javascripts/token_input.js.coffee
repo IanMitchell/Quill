@@ -19,7 +19,8 @@ tokenizeCategories = ->
     
     pre = $(".edit_post #post_category_tokens").attr("data-pre").split(",")
     $.each pre, (i, val) ->
-      tb_edit.add val
+      if val
+        tb_edit.add val
 
     tb_edit.getContainer().addClass "textboxlist-loading"
   
