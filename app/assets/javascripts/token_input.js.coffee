@@ -3,6 +3,7 @@ tokenizeCategories = ->
   # Handle New Post Form
   tb_new = new $.TextboxList("#new_post #post_category_tokens",
     unique: true
+    inBetweenEditableBits: false
     plugins:
       autocomplete: {}
   )
@@ -13,6 +14,7 @@ tokenizeCategories = ->
   if $(".edit_post").length
     tb_edit = new $.TextboxList(".edit_post #post_category_tokens",
       unique: true
+      inBetweenEditableBits: false
       plugins:
         autocomplete: {}
     )

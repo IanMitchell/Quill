@@ -29,7 +29,8 @@ class Post < ActiveRecord::Base
   def category_tokens=(tokens)
     ids = Array.new
     tokens.split(",").each do |c| 
-      if c.is_a? String
+      # Determines if a Number (If not, it means new category)
+      if c.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil
         cat = Category.new
         cat.name = c
         cat.save
