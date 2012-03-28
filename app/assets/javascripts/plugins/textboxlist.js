@@ -30,7 +30,14 @@ $.TextboxList = function(element, _options){
     // tip: you can change encode/decode with JSON.stringify and JSON.parse
     encode: function(o){ 
       return $.grep($.map(o, function(v){   
-        v = (chk(v[0]) ? v[0] : v[1]);
+
+        // ORIGINAL:
+        // v = (chk(v[0]) ? v[0] : v[1]);
+        
+        // NEW:
+        v = (chk(v[0]) ? v[1] : v[1]);
+        // Changed since it wasn't working for Numeric Categories.
+
         return chk(v) ? v.toString().replace(/,/, '') : null;
       }), function(o){ return o != undefined; }).join(','); 
     },

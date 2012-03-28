@@ -24,20 +24,17 @@ class Post < ActiveRecord::Base
     self.content.split('<!--excerpt-->')[0]
   end
 
-  # Existing Categories return an ID, while new
-  # ones return a String. 
   def category_tokens=(tokens)
     ids = Array.new
     tokens.split(",").each do |c| 
-      # Determines if a Number (If not, it means new category)
-      if c.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil
-        cat = Category.new
-        cat.name = c
+      if Category.exists?(:name => c)
+        cat = Category.find_by_name(c)
+      else
+        cat = Category.new(:name => c)
         cat.save
-        c = cat.id
       end
 
-      ids.push(c)
+      ids.push(cat.id)
     end
 
     self.category_ids = ids
