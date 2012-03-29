@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   respond_to :html, :js
 
   def index
-    @pages = Page.all
+    @pages = Page.order("rank")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -59,5 +59,13 @@ class PagesController < ApplicationController
 
       respond_with @page
     end
+  end
+
+
+  def sort
+    params[:page].each_with_index do |id, index|
+      Page.update_all(['rank=?', index+1], ['id=?', id])
+    end
+    render :nothing => true
   end
 end

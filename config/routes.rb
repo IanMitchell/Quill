@@ -9,7 +9,11 @@ Quill::Application.routes.draw do
   match '/archives/date/:year/:month' => 'archives#date'
 
 
-  resources :pages
+  resources :pages do
+    collection do
+      post 'sort'
+    end
+  end
 
   match '/feed' => 'posts#feed', :as => :feed, :defaults => { :format => 'atom' }
 

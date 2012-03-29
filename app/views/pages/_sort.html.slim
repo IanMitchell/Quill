@@ -1,0 +1,8 @@
+div id="sortPages" class="reveal-modal"
+  h1 Reorder Pages
+
+  ul id="page_reorder" data-update-url="#{sort_pages_url}"
+    - @sort_pages.each do |page|
+      = content_tag_for :li, page do
+        span class="handle" [drag]
+        = page.title

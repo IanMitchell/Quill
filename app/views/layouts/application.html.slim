@@ -20,7 +20,7 @@ html
             ul
               li= link_to "Home", root_url
               - header_pages.each do |page|
-                li= link_to page.title, page_url(page)
+                li id="header_page_#{page.id}"= link_to page.title, page_url(page)
 
       p.notice= notice
       p.alert= alert
