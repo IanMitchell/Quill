@@ -1,0 +1,26 @@
+@import "partials/color";
+
+
+#page_sort {
+  list-style: none;
+
+  .handle {
+    margin-right: 20px;
+    cursor: move;
+    float: left;
+  }
+
+  .page {
+    height: 20px;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    background: $theme;
+    color: $theme-background;
+
+    span {
+      display: block;
+      float: left;
+      margin-top: 2px;
+    }
+  }
+}

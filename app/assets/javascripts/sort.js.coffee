@@ -1,5 +1,5 @@
 sortablePages = ->
-  $("#page_reorder").sortable(
+  $("#page_sort").sortable(
     axis: 'y'
     handle: '.handle'
     update: ->
