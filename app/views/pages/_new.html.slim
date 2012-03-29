@@ -21,7 +21,7 @@ div id='newPage' class='reveal-modal'
       = f.label :content
       = f.text_area :content
     p
-      = f.hidden_field :rank, :value => Page.count + 1
+      = f.hidden_field :rank, :value => Page.count + 2
       = f.submit
 
   a class='close-reveal-modal' &#215;
