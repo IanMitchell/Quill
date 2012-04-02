@@ -3,7 +3,7 @@
     = link_to "http://en.gravatar.com/", :target => '_blank' do
       img src=current_author.gravatar_url
     ul
-      li= link_to current_author.email, root_url
+      li= link_to current_author.name, root_url
       li= link_to "New Post", "", "data-reveal-id" => "newPost", "data-remote" => "data-remote"
       li= link_to "New Page", "", "data-reveal-id" => "newPage", "data-remote" => "data-remote"
       li= link_to "Reorder Pages", "", "data-reveal-id" => "sortPages", "data-remote" => "data-remote"
