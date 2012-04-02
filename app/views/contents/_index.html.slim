@@ -1,0 +1,8 @@
+div id="new_content" class="reveal-modal"
+  h1 New File
+  = render :partial => 'contents/form'
+
+  h1 Current Files
+  div class="files"
+    div id="file-spinner"
+    = render @contents

@@ -7,7 +7,7 @@ div id='editPage' class='reveal-modal'
 
     p
       = f.label :title
-      = f.text_field :title, :value => @page.title
+      = f.text_field :title
 
     p
       = f.label :icon
@@ -22,7 +22,7 @@ div id='editPage' class='reveal-modal'
 
     p
       = f.label :content
-      = f.text_area :content, :value => @page.content
+      = f.text_area :content
 
     p
       = f.submit

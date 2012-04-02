@@ -1,5 +1,7 @@
 Quill::Application.routes.draw do
 
+  resources :contents
+
   match '/categories' => 'categories#index'
 
   # Gotta be a better way to do this

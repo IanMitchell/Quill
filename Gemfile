@@ -28,6 +28,9 @@ gem 'jquery-rails'
 gem 'pjax_rails'
 gem 'slim'
 
+# Forms
+gem 'remotipart'
+
 # Images
 gem 'carrierwave'
 

@@ -8,4 +8,5 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require pjax
+//= require jquery.remotipart
 //= require_tree .

@@ -1,0 +1,39 @@
+@import "partials/color";
+
+
+.new_content {
+  margin: 10px 0px 20px 0px;
+}
+
+.files {
+  #file-spinner {
+    text-align: center;
+    margin: auto;
+  }
+
+  .file {
+    padding: 5px 0px 5px 0px;
+
+    span {
+      display: block;
+      float: left;
+      width: 90%;
+
+      a[href$=".pdf"]{}
+      a[href$=".zip"],
+      a[href$=".tar"],
+      a[href$=".rar"]{}
+      a[href$=".psd"]{}
+      a[href$=".png"], 
+      a[href$=".gif"],
+      a[href$=".jpg"],
+      a[href$=".jpeg"]{}
+      a[href$=".html"],
+      a[href$=".htm"]{}
+    }
+
+    .delete {
+
+    }
+  }
+}
