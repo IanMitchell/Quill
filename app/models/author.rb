@@ -19,6 +19,7 @@ class Author < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
   attr_accessor :login
+  attr_accessible :login
 
   has_gravatar
 
