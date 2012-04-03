@@ -21,6 +21,8 @@ group :assets do
   gem 'sass-rails', "  ~> 3.2.3"
 end
 
+# Outside of Assets because we use coffeescript
+# for create/destroy views
 gem 'coffee-rails', "~> 3.2.1"
 gem 'uglifier'
 
@@ -32,7 +34,8 @@ gem 'slim'
 # Forms
 gem 'remotipart'
 
-# Images
+# File Uploads
+gem 'fog'
 gem 'carrierwave'
 
 # Slugs
@@ -53,6 +56,9 @@ gem 'dalli'
 gem 'redcarpet'
 gem 'albino'
 gem 'nokogiri'
+
+# Sensitive Information
+gem "figaro"
 
 
 # Use unicorn as the web server

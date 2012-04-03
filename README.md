@@ -4,6 +4,43 @@ Quill wants to be a blogging platform. At the moment, it's really just something
 
 It should be noted that Quill is still very much in development, and shouldn't be used as a live website. Hopefully we'll be able to offer a stable release soon!
 
+### Setup
+
+Quill doesn't work out of the box (yet!) -- there are a few things you need to do first.
+
+First, you need to set up an admin account
+
+    $ rails c
+    > a = Author.new
+    > a.name = "John Doe"
+    > a.email = "jdoe@quill.com"
+    > a.password = "quill" 
+    > a.save
+    
+Then, you need to create an initial post (this is due to a bug I'm working on fixing as fast as I can)
+
+    > p = Post.new
+    > p.title = "Hello World!"
+    > p.content = "*Hello, world.*"
+    > p.author_id = 1
+    > p.save
+    
+You can add categories via the admin panel later. Finally, you'll need to define a few basic ENV variables
+
+If you're on Heroku:
+
+    heroku config:add PUSHER_APP_ID=0000
+
+If you're not, create `config/application.yml` and define them there (`PUSHER_APP_ID: 0000`).
+
+The variables Quill uses are as follows:
+
+    AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY
+    AWS_FOG_DIRECTORY
+    
+**Note:** If you don't want to use Amazon S3, remove the `config/initializers/carrierwave.rb` file and modify the uploaders. You'll need to switch back to `storage :file`
+
 ### Current Features
 
 * Ajax Comments
@@ -17,14 +54,14 @@ It should be noted that Quill is still very much in development, and shouldn't b
 * JS form validations *(Uses Ajax)*
 * Localstorage autosaving
     * Precursor to Draft Support / Auto Saving
+* File upload
+* Admin Bar
+* Creation/Order of Header / Sidebar Links
 
 ### Features in Progress
 
-* Admin bar
-    * Precursor to Admin Backend
-* Finer control of Header / Sidebar links
 * Email options (new comment notification)
-* Author name / Twitter handle
+* Author Twitter handle
 
 ### Broken Features
 
@@ -38,7 +75,6 @@ It should be noted that Quill is still very much in development, and shouldn't b
 * XML-RPC server
 * Tests!
 * Akismet spam protection
-* File upload
 * Thumbnail support
 * Image galleries
 * Image watermark
@@ -55,9 +91,9 @@ Since I'm now at school, development has hit a bit of a standstill. This is stil
 
 #### Conclusion
 
-If you'd like to see Quill in action, a current version is running the development blog:
+If you'd like to see Quill in action, usually a current version is running here:
 
-http://quill.heroku.com
+<http://quill.heroku.com>
 
 ------------
 Ian Mitchell
