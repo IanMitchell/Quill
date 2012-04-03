@@ -27,5 +27,5 @@ class Author < ActiveRecord::Base
    conditions = warden_conditions.dup
    login = conditions.delete(:login)
    where(conditions).where(["lower(name) = :value OR lower(email) = :value", { :value => login.strip.downcase }]).first
- end
+  end
 end
