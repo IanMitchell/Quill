@@ -52,7 +52,7 @@ html
 
         #twitter
           - cache("tweets", :expires_in => 1.minute) do
-            - @twitter = Twitter.user("IanMitchel1")
+            - @twitter = Twitter.user(Author.first.twitter)
             p= raw auto_link(@twitter.status.text)
             #triangle
             = link_to image_tag(@twitter.profile_image_url), 'http://twitter.com/' + @twitter.screen_name

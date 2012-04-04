@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120404173305) do
+ActiveRecord::Schema.define(:version => 20120404191047) do
 
   create_table "authors", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20120404173305) do
     t.datetime "updated_at",                                            :null => false
     t.string   "name"
     t.string   "google_id"
+    t.string   "twitter"
   end
 
   add_index "authors", ["email"], :name => "index_authors_on_email", :unique => true
