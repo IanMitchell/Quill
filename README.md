@@ -15,6 +15,8 @@ First, you need to set up an admin account
     > a.name = "John Doe"
     > a.email = "jdoe@quill.com"
     > a.password = "quill" 
+    > a.google_id = 001
+    > a.twitter = "handle"
     > a.save
     
 Then, you need to create an initial post (this is due to a bug I'm working on fixing as fast as I can)
@@ -58,9 +60,11 @@ The variables Quill uses are as follows:
 * JS form validations *(Uses Ajax)*
 * Localstorage autosaving
     * Precursor to Draft Support / Auto Saving
-* File upload
+* File upload (Amazon S3)
 * Admin Bar
 * Creation/Order of Header / Sidebar Links
+* Google Author support
+
 
 ### Features in Progress
 
@@ -83,7 +87,6 @@ The variables Quill uses are as follows:
 * Image galleries
 * Image watermark
 * Microdata
-* Google Author support
 * IE9 pinned site support
 * Blog mentions
 
