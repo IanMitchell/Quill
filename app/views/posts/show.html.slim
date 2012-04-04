@@ -9,13 +9,17 @@ article
   footer
     .meta
       span
-        | Posted on 
+        | Posted by #{@post.author.name} on 
         = @post.created_at.strftime('%B %d, %Y') + '. '
         - if @post.created_at != @post.updated_at
           | Updated on 
           = @post.updated_at.strftime('%B %d, %Y') + '. '
         | Categories: 
         = raw @post.post_categories.map { |c| link_to c.category.name, archives_path + '/category/' + c.category.slug }.to_sentence
+
+      - if @post.author.google_id?
+        / Google Author Support. Display is set to none by default
+        = link_to @post.author.name, "https://plus.google.com/#{@post.author.google_id}?rel=author", :class => "google_id"
 
   #comments
     h3= comment_count

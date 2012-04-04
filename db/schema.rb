@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120402200122) do
+ActiveRecord::Schema.define(:version => 20120404173305) do
 
   create_table "authors", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -24,9 +24,10 @@ ActiveRecord::Schema.define(:version => 20120402200122) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                            :null => false
+    t.datetime "updated_at",                                            :null => false
     t.string   "name"
+    t.string   "google_id"
   end
 
   add_index "authors", ["email"], :name => "index_authors_on_email", :unique => true
@@ -35,8 +36,8 @@ ActiveRecord::Schema.define(:version => 20120402200122) do
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.string   "slug"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "categories", ["slug"], :name => "index_categories_on_slug", :unique => true
@@ -47,8 +48,8 @@ ActiveRecord::Schema.define(:version => 20120402200122) do
     t.string   "website"
     t.text     "content"
     t.integer  "post_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "comments", ["post_id"], :name => "index_comments_on_post_id"
@@ -66,8 +67,8 @@ ActiveRecord::Schema.define(:version => 20120402200122) do
     t.boolean  "header"
     t.boolean  "sidebar"
     t.integer  "rank"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "icon"
   end
 
@@ -76,8 +77,8 @@ ActiveRecord::Schema.define(:version => 20120402200122) do
   create_table "post_categories", :force => true do |t|
     t.integer  "post_id"
     t.integer  "category_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   add_index "post_categories", ["category_id"], :name => "index_post_categories_on_category_id"
@@ -88,8 +89,8 @@ ActiveRecord::Schema.define(:version => 20120402200122) do
     t.text     "content"
     t.integer  "author_id"
     t.string   "slug"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "posts", ["author_id"], :name => "index_posts_on_author_id"
