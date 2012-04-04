@@ -35,9 +35,13 @@ If you're not, create `config/application.yml` and define them there (`PUSHER_AP
 
 The variables Quill uses are as follows:
 
+    # Amazon S3
     AWS_ACCESS_KEY_ID
     AWS_SECRET_ACCESS_KEY
     AWS_FOG_DIRECTORY
+    
+    # Google Analytics
+    GOOGLE_ANALYTICS
     
 **Note:** If you don't want to use Amazon S3, remove the `config/initializers/carrierwave.rb` file and modify the uploaders. You'll need to switch back to `storage :file`
 
