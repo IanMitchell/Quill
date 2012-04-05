@@ -61,10 +61,16 @@ html
 
         #twitter
           - cache("tweets", :expires_in => 1.minute) do
-            - @twitter = Twitter.user(Author.first.twitter)
-            p= raw auto_link(@twitter.status.text)
-            #triangle
-            = link_to image_tag(@twitter.profile_image_url), 'http://twitter.com/' + @twitter.screen_name
+            - rate_limit_status = Twitter.rate_limit_status
+            - if rate_limit_status.remaining_hits > 0
+              - @twitter = Twitter.user(Author.first.twitter)
+              p= raw auto_link(@twitter.status.text)
+              #triangle
+              = link_to image_tag(@twitter.profile_image_url), 'http://twitter.com/' + @twitter.screen_name
+            - else
+              p Rate Limit Exceeded
+              #triangle
+              = link_to Author.first.gravatar_url, 'http://twitter.com/' + @twitter.screen_name
           #copyright
             span
               | &copy; Copyright #{Time.new.strftime("%Y")} Ian Mitchell. Based on 
