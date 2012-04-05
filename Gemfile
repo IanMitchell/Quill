@@ -32,9 +32,12 @@ gem 'jquery-rails'
 gem 'pjax_rails'
 gem 'slim'
 
-# Mails
+# Mail
 gem 'delayed_job_active_record'
 gem 'daemons'
+
+# Heroku Delayed Job Support (Needs to be under Delayed Job gem)
+gem 'hirefire'
 
 # Forms
 gem 'remotipart'
