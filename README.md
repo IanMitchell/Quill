@@ -75,16 +75,12 @@ The variables Quill uses are as follows:
 * Admin Bar
 * Creation/Order of Header / Sidebar Links
 * Google Author support
-
-
-### Features in Progress
-
 * Email options (new comment notification)
 * Author Twitter handle
 
 ### Broken Features
 
-* Twitter Integration / Caching *(Gem issue?)*
+* Twitter Integration / Caching *(Gem issue? Usually works)*
 
 ### Future Plans
 
