@@ -59,6 +59,9 @@ Quill::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+  # Devise (Change according to your app)
+  config.action_mailer.default_url_options = { :host => 'http://quill.heroku.com' }
+
   # ActionMailer Settings
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {

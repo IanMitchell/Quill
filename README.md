@@ -8,7 +8,9 @@ It should be noted that Quill is still very much in development, and shouldn't b
 
 Quill doesn't work out of the box (yet!) -- there are a few things you need to do first.
 
-First, you need to set up an admin account
+Before you push your app, you need to set the default url in `config/environments/production.rb` -- right now it defaults to the main Quill website.
+
+After that, you can push your app. Next, you need to set up an admin account
 
     $ rails c
     > a = Author.new
