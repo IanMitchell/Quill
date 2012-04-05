@@ -1,0 +1,11 @@
+<p>Hi <%= @post.author.name %>,</p>
+
+<p>There was a new comment on "<%= @post.title %>"</p>
+
+<p>You can view the post here:</p>
+<p><%= link_to post_url(@post), post_url(@post) %></p>
+
+-------------------<br />
+<p><%= @comment.name %>:</p>
+
+<p><%= @comment.content %></p>

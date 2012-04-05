@@ -45,6 +45,10 @@ The variables Quill uses are as follows:
     # Google Analytics
     GOOGLE_ANALYTICS
     
+    # Gmail
+    GMAIL_USERNAME
+    GMAIL_PASSWORD
+    
 **Note:** If you don't want to use Amazon S3, remove the `config/initializers/carrierwave.rb` file and modify the uploaders. You'll need to switch back to `storage :file`
 
 ### Current Features

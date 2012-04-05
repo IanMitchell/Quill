@@ -12,6 +12,7 @@ end
 # Heroku
 group :production do
   gem 'pg'
+  gem 'unicorn'
 end
 
 
@@ -30,6 +31,10 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'pjax_rails'
 gem 'slim'
+
+# Mails
+gem 'delayed_job_active_record'
+gem 'daemons'
 
 # Forms
 gem 'remotipart'
@@ -60,9 +65,6 @@ gem 'nokogiri'
 # Sensitive Information
 gem "figaro"
 
-
-# Use unicorn as the web server
-# gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'

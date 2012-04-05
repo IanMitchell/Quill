@@ -13,4 +13,12 @@ class Comment < ActiveRecord::Base
 
   belongs_to :post
   has_gravatar
+
+
+  after_create :deliver_notification_email
+
+
+  def deliver_notification_email
+    CommentMailer.delay.comment_notification(self)
+  end
 end
