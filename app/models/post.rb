@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
   belongs_to :author
   has_many :post_categories
   has_many :categories, :through => :post_categories
-  has_many :comments
+  has_many :comments, :order => "created_at ASC"
 
   attr_reader :category_tokens
   
