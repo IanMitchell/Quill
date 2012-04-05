@@ -54,6 +54,7 @@ The variables Quill uses are as follows:
     # Heroku
     HIREFIRE_EMAIL
     HIREFIRE_PASSWORD
+    APP_NAME 
     
 **Note:** If you don't want to use Amazon S3, remove the `config/initializers/carrierwave.rb` file and modify the uploaders. You'll need to switch back to `storage :file`
 
