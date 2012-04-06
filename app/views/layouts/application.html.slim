@@ -7,7 +7,16 @@ html
 
     = auto_discovery_link_tag :atom, 'posts/feed'
     = auto_discovery_link_tag :rss, 'posts/feed.rss'
+
     link type='text/plain' rel='author' href='/humans.txt'
+
+    // Internet Explorer Pinned Site
+    meta name="application-name" content="#{site_title}"
+    meta name="msapplication-tooltip" content="#{site_title}"
+    meta name="msapplication-starturl" content="#{root_url}"
+    - sidebar_pages.each do |p|
+      meta name="msapplication-task" content="name=#{p.title};action-uri#{page_url(p)}"
+
 
     = csrf_meta_tags
 
