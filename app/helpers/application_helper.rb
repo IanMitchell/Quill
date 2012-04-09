@@ -13,10 +13,6 @@ module ApplicationHelper
     Page.all(:order => 'rank', :conditions => { :sidebar => true })
   end
 
-  def start_year
-    Post.first.created_at.strftime("%Y")
-  end
-
   def markdown(text)
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :no_intra_emphasis => true, :fenced_code_blocks => true, :autolink => true)
     syntax_highlighter(markdown.render(text)).html_safe

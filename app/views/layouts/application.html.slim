@@ -46,11 +46,12 @@ html
           h4 Post Archives
           - cache("archives", :expires_in => 1.day) do
             dl
-              - (start_year..Time.now.strftime("%Y")).reverse_each do |year|
+              - (Post.first.created_at.strftime("%Y")..Time.now.strftime("%Y")).reverse_each do |year|
                 dt
                   - posts = Post.where(:created_at => Time.parse("Jan 01 #{year}")..(Time.parse("Jan 01 #{year}") + 1.year))
                   - unless posts.empty?
                     = link_to year, archives_path + '/date/' + year
+
                     - (01..12).each do |month|
                       - unless posts.empty?
                         - m = posts.first.created_at.strftime("%-m").to_i 
@@ -59,10 +60,16 @@ html
                           - posts.shift
                         - if m > month
                           dd= Date::ABBR_MONTHNAMES[month]
+                          
                         - while m < month
                           - posts.shift
+                          - unless posts.empty?
+                            - m = posts.first.created_at.strftime("%-m").to_i
+                          - else
+                            - break
                       - else
                         dd= Date::ABBR_MONTHNAMES[month]
+
                   - else
                     = year
                     - (01..12).each do |month|
