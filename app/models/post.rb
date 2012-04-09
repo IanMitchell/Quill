@@ -17,11 +17,11 @@ class Post < ActiveRecord::Base
   
 
   def article
-    self.content.gsub('<!--excerpt-->', '')
+    self.content.gsub('<!-- excerpt -->', '')
   end
 
   def excerpt
-    self.content.split('<!--excerpt-->')[0]
+    self.content.split('<!-- excerpt -->')[0]
   end
 
   def category_tokens=(tokens)
