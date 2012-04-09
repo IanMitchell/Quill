@@ -1,3 +1,10 @@
+ # create a custom renderer that allows highlighting of code blocks
+class HTMLwithAlbino < Redcarpet::Render::HTML
+  def block_code(code, language)
+    Albino.colorize(code, language)
+  end
+end
+
 module ApplicationHelper
   include Twitter::Autolink
 
@@ -14,15 +21,7 @@ module ApplicationHelper
   end
 
   def markdown(text)
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :no_intra_emphasis => true, :fenced_code_blocks => true, :autolink => true)
-    syntax_highlighter(markdown.render(text)).html_safe
-  end
-
-  def syntax_highlighter(html)
-    doc = Nokogiri::HTML.fragment(html)
-    doc.search("//pre[@lang]").each do |pre|
-      pre.replace Albino.colorize(pre.text.rstrip, pre[:lang])
-    end
-    doc.to_s
+    markdown = Redcarpet::Markdown.new(HTMLwithAlbino, :fenced_code_blocks => true, :no_intra_emphasis => true, :autolink => true)
+    markdown.render(text).html_safe
   end
 end

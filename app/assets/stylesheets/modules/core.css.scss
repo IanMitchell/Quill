@@ -62,8 +62,11 @@ blockquote {
 	}
 }
 
-code {
+code,
+.highlight {
 	font-family: Consolas, Monaco;
+	border-left: 2px solid $theme;
+	margin-left: 20px;
 }
 
 
