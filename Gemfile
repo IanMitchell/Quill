@@ -62,8 +62,8 @@ gem 'dalli'
 
 # Post Styling
 gem 'redcarpet'
-gem 'albino'
 gem 'nokogiri'
+gem 'pygments.rb'
 
 # Sensitive Information
 gem "figaro"
