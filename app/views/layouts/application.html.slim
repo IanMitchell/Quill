@@ -90,7 +90,7 @@ html
             - else
               p Rate Limit Exceeded
               #triangle
-              = link_to Author.first.gravatar_url, 'http://twitter.com/' + @twitter.screen_name
+              = link_to Author.first.gravatar_url, 'http://twitter.com/' + Author.first.twitter
 
           #copyright
             span
