@@ -22,7 +22,7 @@ module ApplicationHelper
   end
 
   def markdown(text)
-    markdown = Redcarpet::Markdown.new(HTMLwithAlbino, :fenced_code_blocks => true, :no_intra_emphasis => true, :autolink => true)
+    markdown = Redcarpet::Markdown.new(HTMLwithAlbino, :fenced_code_blocks => true, :no_intra_emphasis => true, :autolink => true, :strikethrough => true)
     markdown.render(text).html_safe
   end
 end
