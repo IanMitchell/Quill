@@ -1,6 +1,7 @@
  # create a custom renderer that allows highlighting of code blocks
 class HTMLwithAlbino < Redcarpet::Render::HTML
   def block_code(code, language)
+    RubyPython.start(:python_exe => "python2.6")
     Pygments.highlight(code, :lexer => language)
   end
 end
