@@ -1,3 +1,7 @@
+**Note:** This repository is out of date. I used this project to learn Ruby on Rails, and try things out that I wanted to learn. It's no longer in active development, and hasn't been updated in a while.
+
+----
+
 # Quill
 
 Quill wants to be a blogging platform. At the moment, it's really just something I'm making to learn Rails. As such, there are a lot of errors and half-implemented features. I'm sure there are plenty of best-practices that I've broken as well. If you notice anything specific, please let me know! I'd love to change it.
